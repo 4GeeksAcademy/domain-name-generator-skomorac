@@ -6,6 +6,39 @@ import "./assets/img/rigo-baby.jpg";
 import "./assets/img/4geeks.ico";
 
 window.onload = function() {
-  //write your code here
-  console.log("Hello Rigo from the console!");
+  const reloadButton = document.getElementById("reloadButton");
+  const mainText = document.getElementById("main-text");
+
+  let isContentVisible = false;
+  let initalContent = mainText.innerHTML;
+
+  reloadButton.addEventListener("click", function() {
+    isContentVisible = !isContentVisible;
+    if (isContentVisible) {
+      mainText.innerHTML = generateDomain();
+    } else {
+      mainText.innerHTML = initalContent;
+    }
+  });
 };
+
+function generateDomain() {
+  let pronouns = ["the", "our", "an"];
+  let adjs = ["great", "big", "awesome"];
+  let nouns = ["jogger", "racoon", "cat"];
+  let domains = [".com", ".net", ".edu"];
+
+  let result = "";
+
+  for (let pronoun of pronouns) {
+    for (let adj of adjs) {
+      for (let noun of nouns) {
+        for (let domain of domains) {
+          let domainName = `${pronoun}${adj}${noun}${domain}`;
+          result += domainName + "<br>";
+        }
+      }
+    }
+  }
+  return result;
+}

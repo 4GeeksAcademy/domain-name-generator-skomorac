@@ -1,1 +1,31 @@
 @import "~bootstrap/dist/css/bootstrap.min.css";
+
+/* Button Styles */
+button {
+  padding: 10px 20px;
+  font-size: 18px;
+  font-weight: bold;
+  color: #fff;
+  background-color: #007bff; /* Primary color - you can change this to your preferred color */
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+/* Hover effect */
+button:hover {
+  background-color: #013b7a; /* Darker shade for hover effect */
+}
+
+/* Optional: Add some box shadow for a subtle 3D effect */
+button:active {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Optional: If you want the button to be full-width on small screens */
+@media (max-width: 767px) {
+  button {
+    width: 100%;
+  }
+}
