@@ -35,7 +35,7 @@ function generateDomain() {
       for (let noun of nouns) {
         for (let domain of domains) {
           let domainName = `${pronoun}${adj}${noun}${domain}`;
-          result += domainName + "<br>";
+          generatdDomainNames += domainName + "<br>";
         }
       }
     }
