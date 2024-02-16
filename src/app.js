@@ -10,14 +10,14 @@ window.onload = function() {
   const mainText = document.getElementById("main-text");
 
   let isContentVisible = false;
-  let initalContent = mainText.innerHTML;
+  let initialContent = mainText.innerHTML;
 
   reloadButton.addEventListener("click", function() {
     isContentVisible = !isContentVisible;
     if (isContentVisible) {
       mainText.innerHTML = generateDomain();
     } else {
-      mainText.innerHTML = initalContent;
+      mainText.innerHTML = initialContent;
     }
   });
 };
@@ -28,7 +28,7 @@ function generateDomain() {
   let nouns = ["jogger", "racoon", "cat"];
   let domains = [".com", ".net", ".edu"];
 
-  let result = "";
+  let generatdDomainNames = "";
 
   for (let pronoun of pronouns) {
     for (let adj of adjs) {
@@ -40,5 +40,5 @@ function generateDomain() {
       }
     }
   }
-  return result;
+  return generatdDomainNames;
 }
